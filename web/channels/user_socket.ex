@@ -2,11 +2,10 @@ defmodule Shoom.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", Shoom.RoomChannel
+  channel "game", Shoom.GameChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
-  # transport :longpoll, Phoenix.Transports.LongPoll
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
