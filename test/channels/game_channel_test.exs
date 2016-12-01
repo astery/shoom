@@ -12,8 +12,9 @@ defmodule Shoom.GameChannelTest do
   end
 
   test "one player sends positions", %{socket: socket, nick: nick} do
-    pos = %{"x" => 0, "y" => 1}
-    push socket, "send_position", pos
-    broadcast_from socket, "position", %{"user_id" => nick, "pos" => pos}
+    push socket, "move", %{"angle" => 1.5707963268, "keydown" => true}
+    assert_broadcast "position", %{"user_id" => ^nick, "pos" => %{"x" => x, "y" => y}}
+    assert_in_delta(0, x, 0.01)
+    assert_in_delta(10, y, 0.01)
   end
 end
