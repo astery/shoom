@@ -8,16 +8,20 @@ Math.toRad = function(angle) {
 
 function ready() {
 
-	fps = 20;
+	fps = 30;
 	canvas = document.getElementById("game");
 	ctx = canvas.getContext('2d');
 	canvas.width  = 640;
 	canvas.height  = 480;
 
+	// Класс точки с двумя координатами
+
 	var Point = function (x,y) {
 		this.x = x;
 		this.y = y;
 	}
+
+	// Класс захватываемой территории
 
 	var CapturedArea = function () {
 		this.border = [];
@@ -25,14 +29,14 @@ function ready() {
 		this.isActive = true;
 
 		this.checkToClose = function() {
-     if (
-     	!this.isСlosed && 
-     	this.border.length > 5 && 
-     	checkDistance(this.border[this.border.length - 1], this.border[0], 10)
-     	) {
-     		this.isСlosed = true;
-     		console.log("close");
-     }
+		 if (
+			!this.isСlosed && 
+			this.border.length > 5 && 
+			checkDistance(this.border[this.border.length - 1], this.border[0], 15)
+			) {
+				this.isСlosed = true;
+				console.log("close");
+		 }
 		}
 
 		this.draw = function() {
@@ -43,7 +47,7 @@ function ready() {
 				ctx.beginPath();
 				ctx.moveTo(this.border[0].x, this.border[0].y);
 
-				for (i = 1; i < this.border.length; i++) {
+				for (var i = 1; i < this.border.length; i++) {
 					ctx.lineTo(this.border[i].x, this.border[i].y);
 				}
 
@@ -65,10 +69,16 @@ function ready() {
 		}		
 	}
 
+	// Класс игрока
+
 	var Player = function() {
+		this.COLOR = "blue";
 		this.STEPS_TO_POINT = 3;
+		this.STOP_DISTANCE = 2;
 		this.stepCounter = 0;
-		this.area = new CapturedArea();
+
+		this.areas = [];
+		this.areas.push(new CapturedArea());
 
 		this.size = 50;
 		this.speed = 5;
@@ -76,8 +86,16 @@ function ready() {
 		this.lastCursorPos = new Point(this.pos.x, this.pos.y);
 		this.currentXYVelocity = new Point(0, 0);
 
+		this.tryNewArea = function() {
+			if (this.areas[this.areas.length - 1].isСlosed) {
+				console.log('new area');
+				this.areas.push(new CapturedArea());
+				console.log(this.areas);
+			}
+		}
+
 		this.movePlayer = function() {
-			if (checkDistance(this.pos, this.lastCursorPos, 10))
+			if (checkDistance(this.pos, this.lastCursorPos, this.STOP_DISTANCE))
 				return;
 			else {
 				this.pos.x += this.currentXYVelocity.x;
@@ -87,18 +105,42 @@ function ready() {
 					this.stepCounter += 1;
 				}
 				else {
-					this.area.addPoint(new Point(this.pos.x,this.pos.y))
+					this.areas[this.areas.length - 1].addPoint(new Point(this.pos.x,this.pos.y));
+					this.tryNewArea();
 					this.stepCounter = 0;
 				}
 			}
 		}
 
-		this.draw = function(color = "#3f669f") {
-			this.area.draw();
-			ctx.fillStyle = color;
+		this.drawAreas = function() {
+			if (this.areas.length > 0) {
+				for (var i = 0; i < this.areas.length; i++) {
+					this.areas[i].draw();
+				}
+			}
+		}
+
+		this.draw = function() {
+			this.drawAreas();
+
+			ctx.fillStyle = this.COLOR;
 			ctx.fillRect(this.pos.x-this.size/2, this.pos.y-this.size/2, this.size, this.size);			
 		}
 	}
+
+	// Mouse listeners
+
+	canvas.addEventListener('mousemove', function(e) {
+		var angle = getPlayerAngle(e);
+		player.currentXYVelocity = getXYvelocityFromAngle(angle);
+	}, false);
+
+	canvas.addEventListener('mousedown', function(e) {
+		player.areas = [];
+		player.areas.push(new CapturedArea());
+	}, false);
+
+	// Global functions
 
 	var checkDistance = function(point1,point2,limit = 10) {
 		if (point1 && point2) {
@@ -143,11 +185,6 @@ function ready() {
 		}
 	}
 
-	canvas.addEventListener('mousemove', function(e) {
-		var angle = getPlayerAngle(e);
-		player.currentXYVelocity = getXYvelocityFromAngle(angle);
-	}, false);
-
 	var clearScreen = function() {
 		ctx.clearRect(0,0,canvas.width,canvas.height)
 	}
@@ -158,10 +195,11 @@ function ready() {
 		player.draw();
 	}
 
+	// Initiate
+
 	var player = new Player();
 
 	setInterval(function(){
-//		console.log("draw")
 		update();
 	},1000/fps);        
 }
