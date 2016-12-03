@@ -14,18 +14,32 @@ function ready() {
 	canvas.width  = 640;
 	canvas.height  = 480;
 
-	var AreaPoint = function (x,y) {
+	var Point = function (x,y) {
 		this.x = x;
 		this.y = y;
 	}
 
 	var CapturedArea = function () {
 		this.border = [];
+		this.isСlosed = false;
+		this.isActive = true;
+
+		this.checkToClose = function() {
+     if (
+     	!this.isСlosed && 
+     	this.border.length > 5 && 
+     	checkDistance(this.border[this.border.length - 1], this.border[0], 10)
+     	) {
+     		this.isСlosed = true;
+     		console.log("close");
+     }
+		}
 
 		this.draw = function() {
 			if (this.border.length > 1) {
 
 				ctx.fillStyle = "red";
+				ctx.strokeStyle = "red";
 				ctx.beginPath();
 				ctx.moveTo(this.border[0].x, this.border[0].y);
 
@@ -33,14 +47,21 @@ function ready() {
 					ctx.lineTo(this.border[i].x, this.border[i].y);
 				}
 
-				ctx.closePath();
-				ctx.fill();
-
+				if (!this.isСlosed) {
+					ctx.stroke();
+				}
+				else {
+					ctx.closePath();
+					ctx.fill();
+				}
 			}
 		}
 
 		this.addPoint = function(point) {
-			this.border.push(point);
+			this.checkToClose();
+			if (!this.isСlosed) {
+				this.border.push(point);
+			}
 		}		
 	}
 
@@ -49,30 +70,24 @@ function ready() {
 		this.stepCounter = 0;
 		this.area = new CapturedArea();
 
-		this.x = 100;
-		this.y = 100;
 		this.size = 50;
 		this.speed = 5;
-		this.currentXYVelocity = {x: 0, y: 0};
-		this.lastCursorPos = {x: this.x, y: this.y}
+		this.pos = new Point(100,100);
+		this.lastCursorPos = new Point(this.pos.x, this.pos.y);
+		this.currentXYVelocity = new Point(0, 0);
 
 		this.movePlayer = function() {
-			if (
-				this.x - 10 < this.lastCursorPos.x &&
-				this.x + 10 > this.lastCursorPos.x &&
-				this.y - 10 < this.lastCursorPos.y &&
-				this.y + 10 > this.lastCursorPos.y
-				)
+			if (checkDistance(this.pos, this.lastCursorPos, 10))
 				return;
 			else {
-				this.x += this.currentXYVelocity.x;
-				this.y -= this.currentXYVelocity.y;
+				this.pos.x += this.currentXYVelocity.x;
+				this.pos.y -= this.currentXYVelocity.y;
 
 				if (this.stepCounter < this.STEPS_TO_POINT) {
 					this.stepCounter += 1;
 				}
 				else {
-					this.area.addPoint(new AreaPoint(this.x,this.y))
+					this.area.addPoint(new Point(this.pos.x,this.pos.y))
 					this.stepCounter = 0;
 				}
 			}
@@ -81,8 +96,24 @@ function ready() {
 		this.draw = function(color = "#3f669f") {
 			this.area.draw();
 			ctx.fillStyle = color;
-			ctx.fillRect(this.x-this.size/2, this.y-this.size/2, this.size, this.size);			
+			ctx.fillRect(this.pos.x-this.size/2, this.pos.y-this.size/2, this.size, this.size);			
 		}
+	}
+
+	var checkDistance = function(point1,point2,limit = 10) {
+		if (point1 && point2) {
+			if (
+				point1.x - limit < point2.x &&
+				point1.x + limit > point2.x &&
+				point1.y - limit < point2.y &&
+				point1.y + limit > point2.y
+				)
+				return true;
+			else
+				return false;
+		}
+		else 
+			console.log("No points");
 	}
 
 	var getMousePos = function(e) {
@@ -96,8 +127,8 @@ function ready() {
 	var getPlayerAngle = function(e) {
 		player.lastCursorPos = getMousePos(e);
 
-		var x = player.lastCursorPos.x - player.x;
-		var y = player.lastCursorPos.y - player.y;
+		var x = player.lastCursorPos.x - player.pos.x;
+		var y = player.lastCursorPos.y - player.pos.y;
 
 		if(x==0) return (y>0) ? 180 : 0;
 		var angle = Math.atan(y/x)*180/Math.PI;
