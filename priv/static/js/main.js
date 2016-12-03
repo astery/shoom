@@ -11,6 +11,7 @@ function ready() {
 	canvas.height  = 480;
 
 	var sendData = function(directionType = "move", angle = 0, state = false) {
+		console.log(directionType + " " + angle + " " + state);
 		channel.push("move", {angle: angle * (Math.pi/180), "keydown": state}, 10000)
 	}
 
@@ -20,16 +21,16 @@ function ready() {
 		this.size = 50;
 	}
 
-	var keyListenerHash = function(keys,is_exclusive,angle) {
+	var keyListenerHash = function(keys,bool_trigger,angle) {
 		var keyHash =	{
 			"keys"          : keys,
-			"is_exclusive"  : is_exclusive,
 			"on_keydown"    : function(e) {
 				sendData("move",angle,true);
 			},
 			"on_keyup"      : function(e) {
 				sendData("move",angle,false);
 			},
+			"is_exclusive"  : false,
 			"prevent_repeat": true,
 			"prevent_default": true,
 			"is_unordered": true,
@@ -43,13 +44,13 @@ function ready() {
 	var my_scope = this;
 	var my_combos = listener.register_many([
 		keyListenerHash("w", false, 0), 
-		keyListenerHash("w d", false, 45), 
+		keyListenerHash("w d", true, 45), 
 		keyListenerHash("d", false, 90), 
-		keyListenerHash("d s", false, 135), 
+		keyListenerHash("d s", true, 135), 
 		keyListenerHash("s", false, 180), 
-		keyListenerHash("a s", false, 225), 
+		keyListenerHash("a s", true, 225), 
 		keyListenerHash("a", false, 270), 
-		keyListenerHash("w a", false, 315)
+		keyListenerHash("w a", true, 315)
 	]);
 		
 	Player.prototype.drawPlayer = function(color = "#3f669f") {

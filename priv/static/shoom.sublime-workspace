@@ -1,0 +1,702 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"if",
+				"if\tif … end"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"bac",
+				"background-repeat"
+			],
+			[
+				"margin",
+				"margin-trailer"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"text-",
+				"text-indent"
+			],
+			[
+				"ex",
+				"expanded\t(config.rb)"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"adjus",
+				"adjust-font-size-to"
+			],
+			[
+				"js",
+				"jsonData"
+			],
+			[
+				"po",
+				"pointer"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"cu",
+				"cursor"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"wd",
+				"wid\twidows"
+			],
+			[
+				"fonts",
+				"font-style"
+			],
+			[
+				"mar",
+				"margin-trailer"
+			],
+			[
+				"sans",
+				"sans-serif"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"wi",
+				"width\t(style.scss)"
+			],
+			[
+				"op",
+				"opacity"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"inc",
+				"include\t(_typography.scss)"
+			],
+			[
+				"ext",
+				"extend"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"va",
+				"var1"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "live",
+		"selected_items":
+		[
+			[
+				"live",
+				"LiveReload: Self test"
+			],
+			[
+				"git p",
+				"Git: Pull"
+			],
+			[
+				"gitsta",
+				"Git: Status"
+			],
+			[
+				"pacins",
+				"Package Control: Install Package"
+			],
+			[
+				"pacre",
+				"Package Control: Remove Package"
+			],
+			[
+				"pacin",
+				"Package Control: Install Package"
+			],
+			[
+				"snippeh",
+				"Snippet: html"
+			],
+			[
+				"pac",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pains",
+				"Package Control: Install Package"
+			],
+			[
+				"pacco",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"pacl",
+				"Package Control: List Packages"
+			],
+			[
+				"sni",
+				"Snippet: If Condition"
+			],
+			[
+				"prefi",
+				"Autoprefix CSS"
+			],
+			[
+				"pain",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"livere",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"liverea",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"lreload",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"mini",
+				"Minify Javascript"
+			],
+			[
+				"be",
+				"Javascript Beautify"
+			],
+			[
+				"pacinsta",
+				"Package Control: Install Package"
+			],
+			[
+				"beau",
+				"Javascript Beautify"
+			],
+			[
+				"mi",
+				"Minify Javascript"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pacd",
+				"Package Control: Disable Package"
+			],
+			[
+				"painsta",
+				"Package Control: Install Package"
+			],
+			[
+				"packins",
+				"Package Control: Install Package"
+			],
+			[
+				"acre",
+				"Package Control: Remove Package"
+			],
+			[
+				"paclis",
+				"Package Control: List Packages"
+			],
+			[
+				"packre",
+				"Package Control: Remove Package"
+			],
+			[
+				"pare",
+				"Package Control: Remove Package"
+			],
+			[
+				"paci",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: pac",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 432.0
+	},
+	"console":
+	{
+		"height": 553.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Web/Projects/js_online_game/shoom/priv/static/js/phoenix.js",
+		"/D/Web/Projects/js_online_game/shoom/priv/static/css/main.css",
+		"/D/Web/Projects/js_online_game/shoom/priv/static/index.html",
+		"/D/Web/Projects/js_online_game/shoom/priv/static/js/main.js",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/D/Web/Projects/js_online_game/shoom/.gitignore",
+		"/D/Web/Projects/js_online_game/js/main.js",
+		"/D/Web/Projects/js_online_game/index.html",
+		"/D/Web/Projects/js_online_game/css/main.css",
+		"/D/Web/Projects/met-izdeliya/html/setrbvars.bat",
+		"/C/Users/Vladmir/Desktop/dk.rb",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/ERB Autocomplete/README.md",
+		"/C/Users/Vladmir/Desktop/save/game1.sav",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp25843/www/testik.zemlebur.ru/index.html",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp33829/www/testik.zemlebur.ru/css/main.css",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp56252/www/testik.zemlebur.ru/js/main.js",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp15360/www/testik.zemlebur.ru/js/main.js",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp37739/www/testik.zemlebur.ru/css/main.css",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp28525/www/testik.zemlebur.ru/index.html",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp10271/www/testik.zemlebur.ru/index.html",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp42524/www/testik.zemlebur.ru/css/main.css",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp10952/www/testik.zemlebur.ru/js/main.js",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp34072/home/s/shishk1d/stef.rf/public_html/view/right_view.php",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp32204/home/s/shishk1d/stef.rf/public_html/view/base_view.php",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp32970/home/s/shishk1d/stef.rf/public_html/news.php",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp29115/home/s/shishk1d/stef.rf/public_html/js/admin_buy.js",
+		"/C/WebServers/home/anyadanil.loc/www/sass/style.scss",
+		"/C/WebServers/home/anyadanil.loc/www/setrbvars.bat",
+		"/C/WebServers/home/anyadanil.loc/www/wassap.jade",
+		"/Z/home/anyadanil.loc/www/index.php",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp03640/home/bigen/sites/.anyadanil/index.php",
+		"/Z/home/anyadanil.loc/www/sass/style.scss",
+		"/Z/home/anyadanil.loc/www/wassap.jade",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp58448/home/bigen/sites/.anyadanil/wassap.html",
+		"/Z/home/anyadanil.loc/www/login.jade",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp47393/home/bigen/sites/.anyadanil/index.php",
+		"/C/WebServers/home/anyadanil.loc/www/index.jade",
+		"/Z/home/anyadanil.loc/www/wassap.html",
+		"/C/WebServers/home/afanasov.loc/www/index.jade",
+		"/C/WebServers/home/afanasov.loc/www/sass/style.scss",
+		"/Z/usr/local/apache/conf/httpd.conf",
+		"/C/Users/Vladmir/Desktop/hosts",
+		"/C/WebServers/usr/local/apache/conf/httpd.conf",
+		"/C/WebServers/home/anyadanil.loc/www/index.html",
+		"/C/WebServers/home/anyadanil.loc/www/conf.jade",
+		"/C/WebServers/home/anyadanil.loc/www/nodevars.bat",
+		"/C/WebServers/home/anyadanil.loc/www/config.rb",
+		"/C/Users/Vladmir/cc_20160711_134501_2.reg",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Vladmir/AppData/Local/4A Games/Metro Last Light/110000101fb2782/user.cfg",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp55408/www/xn--18-6kc6aa9afic.xn--p1ai/index.html",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp53881/www/xn--18-6kc6aa9afic.xn--p1ai/.htaccess",
+		"/C/Users/Vladmir/AppData/Roaming/Skype/sinozet/config.xml",
+		"/C/Users/Vladmir/Desktop/ARMYMEN/custom.cfg",
+		"/C/Users/Vladmir/Desktop/ExWeapons.dec",
+		"/D/Games/Zandronum/lca/Sounds/KEYCONF",
+		"/D/Games/Zandronum/lca/SBARINFO",
+		"/D/Games/Zandronum/lca/Actors/Weapons/ShotgunMinigun.txt",
+		"/D/Games/Zandronum/lca/Actors/Weapons/ExplosiveMinigun.txt",
+		"/D/Games/Zandronum/lca/KEYCONF",
+		"/D/Games/Zandronum/lca/acs/INVSTUFF.o",
+		"/D/Games/Zandronum/lca/acs/LEGMUSIC.lmp",
+		"/D/Games/Zandronum/lca/LOADACS.txt",
+		"/D/Games/Zandronum/lca/INVSTUFF.acs",
+		"/D/Games/Zandronum/lca/SPWNPR.acs",
+		"/C/Users/Vladmir/workspace/the_garden/main.c",
+		"/C/Users/Vladmir/Desktop/slither/slither.io.html",
+		"/C/Users/Vladmir/Desktop/slither/slither.io_files/game45.js",
+		"/D/PAragon_Aligment_tool_4/mernis/data_dump.sql",
+		"/D/TakeThat Ent/projects/Rogue_7x7/Builds/0.0.1/main.c",
+		"/D/eclipse32/eclipse.ini",
+		"/D/eclipse/eclipse.ini",
+		"/D/eclipse32/eclipse.exe",
+		"/D/TakeThat Ent/projects/Rogue_7x7/Builds/0.0.1/compile.bat",
+		"/C/Users/Vladmir/Downloads/SDLTest.c",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/User/compile_game.py",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/User/bh_core.sublime-settings",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Vladmir/AppData/Local/Temp/Rar$DRa0.652/README-SDL.txt",
+		"/C/Users/Vladmir/Desktop/C_game/main.c",
+		"/C/Users/Vladmir/Desktop/C_game/compile.bat",
+		"/D/Steam/SteamApps/common/insurgency2/insurgency/cfg/autoexec.cfg",
+		"/D/Steam/SteamApps/common/insurgency2/insurgency/cfg/config — копия.cfg",
+		"/C/MinGW/include/stdio.h",
+		"/C/MinGW/include/_mingw.h",
+		"/Y/alvis-webif-80/public/scripts/scripts.js",
+		"/Y/alvis-webif-80/views/main_layout.php",
+		"/Y/alvis-webif-80/public/app.php",
+		"/Y/alvis-webif-80/views/system_settings.php",
+		"/Y/alvis-webif-80/controllers/system_settings_controllers.php",
+		"/Y/alvis-webif-80/public/index.php",
+		"/Y/html/index.php",
+		"/Y/html/controllers/index_controller.php",
+		"/Y/html/lib/boot.php",
+		"/Y/html/config.php",
+		"/Y/html/cli.php",
+		"/Y/html/.htaccess",
+		"/Y/html/modules/auth.php",
+		"/C/WebServers/home/afanasov.loc/www/sass/_rhythm.scss",
+		"/C/WebServers/home/afanasov.loc/www/sass/_mixins.scss",
+		"/C/WebServers/home/afanasov.loc/www/sass/_fonts.scss",
+		"/C/WebServers/home/afanasov.loc/www/sass/_order.scss",
+		"/C/WebServers/home/afanasov.loc/www/conf.jade",
+		"/C/WebServers/home/afanasov.loc/www/thanx.jade",
+		"/C/WebServers/home/afanasov.loc/www/js/main.js",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp59267/home/bigen/sites/.afanasov/index.html",
+		"/C/WebServers/home/afanasov.loc/www/conf.html",
+		"/C/WebServers/home/afanasov.loc/www/index.html",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/Autoprefixer/readme.md",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/User/Autoprefixer.sublime-settings",
+		"/C/Users/Vladmir/AppData/Roaming/Sublime Text 3/Packages/Autoprefixer/Autoprefixer.sublime-settings",
+		"/C/WebServers/home/afanasov.loc/www/sendmail.php",
+		"/C/WebServers/home/afanasov.loc/www/mailer/mail.php",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp41917/home/bigen/sites/afanasov/robots.txt",
+		"/C/Users/Vladmir/AppData/Local/Temp/scp42072/home/bigen/sites/afanasov/robots.txt",
+		"/C/WebServers/home/afanasov.loc/www/config.rb",
+		"/C/WebServers/home/afanasov.loc/www/css/style.css",
+		"/C/WebServers/home/afanasov.loc/www/shadowbox/shadowbox.js",
+		"/C/WebServers/home/afanasov.loc/www/test.html",
+		"/C/Users/Vladmir/Desktop/slideshow/slideexample.html",
+		"/D/Web/Assets/js-jq-plugins/shadowbox-master/README.md",
+		"/C/WebServers/home/afanasov.loc/www/lightbox/js/lightbox.js",
+		"/C/WebServers/home/afanasov.loc/www/js/slideshow.js",
+		"/C/WebServers/home/afanasov.loc/www_old/index.jade",
+		"/C/WebServers/home/afanasov.loc/www_old/sass/style.scss",
+		"/C/WebServers/home/afanasov.loc/www_old/sass/_grids.scss"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"gsc",
+			"scale",
+			"trf",
+			"scale",
+			"scl",
+			"zm",
+			"scale",
+			"scr",
+			"scale",
+			"UserSocket",
+			"origin",
+			"check_origin",
+			"true",
+			"false",
+			",",
+			"),",
+			"sh(",
+			"my_scope,",
+			"0",
+			"keyListenerHash(",
+			"y",
+			"1",
+			"\");",
+			"event",
+			"size",
+			"10",
+			"example",
+			"ytplayer",
+			"player",
+			"ackground-image: url",
+			"pausepause",
+			"stopVideo",
+			"tAf7WmKqVV4",
+			"data-src=\"/video/",
+			"data-src=\"/video/main.mp4\" ",
+			"</iframe>",
+			"%\"></div>",
+			"div class=\"video_img",
+			"div class=\"video",
+			"iframe",
+			"</div>",
+			"<div class=\"video_info\">",
+			"200px",
+			"<iframe",
+			"div",
+			"order_section_title",
+			"order_bottom_titles",
+			"console",
+			"isFullPack",
+			"onsole.log('true');",
+			"isFullPack",
+			"wasNull",
+			"calcLen",
+			".hide();",
+			"isFullPack",
+			"calcLen",
+			"calcLen()",
+			"totalPriceSpan",
+			"order_total_price",
+			"orderInputs",
+			"calculate",
+			"totalPriceSpan",
+			"hide",
+			"order_discount_price_info",
+			"info').hide",
+			"der_discount_price_info').show();",
+			"isFullPack",
+			"discoun",
+			"   ",
+			"news",
+			"fancybo",
+			"C",
+			": ",
+			"/lo",
+			" '/wassap",
+			"/wassap.html';",
+			"$name = ",
+			"include '/wa",
+			"include '/wassap.html';\n\t\t\t$nam",
+			"case '864934':\n\t\t\tinclude '/wassap.html';",
+			"break;",
+			"       ",
+			"Win32DisableAcceptEx",
+			"the bat",
+			"visua",
+			"advertpla",
+			"Explosive",
+			"min",
+			"mini",
+			"minig\t",
+			"[],\n",
+			"onkeydown",
+			"document.onkeydown",
+			"gsc",
+			"scale",
+			"lmc2",
+			"scale",
+			"zoom",
+			"getData (",
+			"getData(",
+			"getData",
+			"surface",
+			".w",
+			" w ",
+			"this.h",
+			"surfa",
+			"SDL_INIT_EVERYTHING",
+			"r_3d",
+			");\n",
+			"c",
+			"printf",
+			"read",
+			"printf",
+			"get_reboot_f",
+			"get_reboo",
+			"get_reboot_f",
+			"? ",
+			"- ",
+			"000000",
+			"10",
+			"C14",
+			"slideIt",
+			"footer",
+			"h1",
+			"15px",
+			"client_text",
+			"data-product",
+			"type"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git-pull":
+	{
+		"height": 96.0
+	},
+	"pinned_build_system": "",
+	"project": "shoom.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
